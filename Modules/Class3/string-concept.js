@@ -22,6 +22,7 @@ console.log(typeof cityName2);
 
 // let cityName = `New York City` 
 let cityNameLength = cityName.length;
+console.log(`\ncityName -> ${cityName}`); // will print out city name in terminal 
 console.log(`Length = ${cityNameLength}`) // should be 13 
 
 /**
@@ -42,18 +43,19 @@ console.log(`cityName_U -> ${cityName_U}`)
 let cityName1 = `New York City`;
 console.log(`cityName -> ${cityName1}`)
 cityName1 = cityName1.toUpperCase()
-console.log(`cityName_U -> ${cityName1}`)
+console.log(`cityName1 -> ${cityName1}`)
 
 
 /**
  * To convert string into lowercase 
- * function: toUpperCase()
+ * function: toLowerCase()
  * 
  * toLowerCase() does NOT change the original value in the variable
  */
 
  let cityName_L = cityName1.toLowerCase()
- console.log(`cityName_U -> ${cityName_L}`)
+ console.log(`\ncityName -> ${cityName}`);
+ console.log(`cityName_L = ${cityName_L}`);
 
  // let cityName = `New York City`
  // does cityName start with 'n'
@@ -69,25 +71,29 @@ console.log(`cityName_U -> ${cityName1}`)
   * 
   */
 
- // Let cityName = "New York City"
- //let cityNameStartsWith_n = cityName.startsWith(`n`)
- //console.log(`cityName -> ${cityName}`)
- //console.log(`is ${cityName} starts with 'n' : ${cityNameStartsWith_n}`)
 
- //let cityNameStartsWith_New_Y = cityName.startsWith(`New Y`)
- //console.log(`cityName -> ${cityName}`)
- //console.log(`is ${cityName} starts with 'n' : ${cityNameStartsWith_New_Y}`)
+// let cityName = 'New YOrK ciTy';
+let cityNameStartsWith_n = cityName.startsWith('n');
+console.log(`\ncityName -> ${cityName}`);
+console.log(`is ${cityName} start with 'n' : ${cityNameStartsWith_n}`);
 
- //let startsWithPattern = `NeW y`
- //startsWithPattern = startsWithPattern.toUpperCase()    // NEW Y 
- //let cityName_Uppercase = cityName.toUpperCase       // NEW YORK CITY
+let cityNameStartsWith_New_Y = cityName.startsWith('New Y');
+console.log(`\ncityName -> ${cityName}`);
+console.log(`is ${cityName} start with 'New Y' : ${cityNameStartsWith_New_Y}`);
 
- //let cityNameStartsWith_neW_Y = cityName.Uppercase.startsWith(startsWithPattern)
- //console.log(`cityName -> ${cityName}`)
- //console.log(`is ${cityName} starts with 'n' : ${cityNameStartsWith_neW_Y}`)
+/**
+ * Example for ignoring pattern with StartsWith
+ */
 
- let res = cityName.toUpperCase().startsWith(startsWithPattern.toUpperCase())
- console.log(res)
+let startsWithPattern = 'neW y';
+startsWithPattern = startsWithPattern.toUpperCase();    // NEW Y
+let cityName_Uppercase = cityName.toUpperCase();        // NEW YORK CITY
+let cityNameStartsWith_neW_Y = cityName_Uppercase.startsWith(startsWithPattern);
+console.log(`\ncityName -> ${cityName}`);
+console.log(`is ${cityName} start with 'neW Y' : ${cityNameStartsWith_neW_Y}`);
+
+// let res = cityName.toUpperCase().startsWith(startsWithPattern.toUpperCase());
+// console.log(res);
 
 
 

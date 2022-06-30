@@ -15,8 +15,6 @@
  * 
  */
 
-let lvar1 = 10, lvar2 = 20, lvar3 = 30, lvar4 = 40;
-
 /**
  * lvar1 is greater than 1var3 and lvars is not equals to lvar4
  * 
@@ -24,7 +22,7 @@ let lvar1 = 10, lvar2 = 20, lvar3 = 30, lvar4 = 40;
  * 
  * false && True
  * 
- * false -> both conditions have to be true in order to get a true 
+ * false -> both conditions have to be true in order to get a true, if 1 2 false its false, if 1 true 1 false its false 
  * 
  * 
  * age = 20 
@@ -37,14 +35,23 @@ let lvar1 = 10, lvar2 = 20, lvar3 = 30, lvar4 = 40;
  * 
  */
 
- lvar1 <= lvar3 && (lvar2 === lvar3 + lvar4) // false 
+ let lVar1 = 10, lVar2 = 20, lVar3 = 30, lVar4 = 40;
 
- /**
-  * 10 <= 30 && (20 === 30+40)
-  * True && (20 === 70)
-  * true && false 
-  * false 
-  */
-console.log(`1res1 -> ${res1}`)
+let lRes1 = lVar1 <= lVar3 && (lVar2 === lVar3 + lVar4);     // false
+        /*
+            10 <= 30 && (20 === 30+40)
+            true && (20 === 70)
+            true && false
+            false
+        */
+console.log(`lRes1 -> ${lRes1}`);
 
- res1 = lvar3 && (lvar2 === lvar3 + lvar4) 
+lRes1 = lVar1 <= lVar3 && !(lVar2 === lVar3 + lVar4); 
+        /*
+            10 <= 30 && !(20 === 30+40)
+            true && !(20 === 70)
+            true && !(false)
+            true && true
+            true
+        */
+console.log(`lRes1 -> ${lRes1}`);
