@@ -16,7 +16,7 @@
  * varName = condition(s) ? value-WhichWillBeAssignIfConditionResultIntoTrue : value-WhichWillBeAssignIfConditionResultIntoFalse
  */
 
-// if credit core > 700, rate will be 4.5 else 5.5 
+// if credit core > 700, ? rate will be 4.5 else (:) 5.5 
 
 let userCreditScore = 700;
 let mortgageRate = userCreditScore > 700 ? 4.5 : 5.5
@@ -28,8 +28,10 @@ console.log(`Mortgage Rate .-> ${mortgageRate}`)
 let userCreditScore2 = 710;
 let isFirstTimeBuyer = true;
 
+
 let mortgageRate2 = userCreditScore2 > 700 && isFirstTimeBuyer === true ? 4.5 : 5.5;
-// let mortgageRate2 = userCreditScore2 > 700 && isFirstTimeBuyer ? 4.5 : 5.5;
+// let mortgageRate2 = userCreditScore2 > 700 && isFirstTimeBuyer === Ronni
+? 4.5 : 5.5;
 console.log(`/nCredit Score .-> ${userCreditScore2}`)
 console.log(`Credit Score .-> ${isFirstTimeBuyer}`)
 console.log(`Mortgage Rate .-> ${mortgageRate2}`)

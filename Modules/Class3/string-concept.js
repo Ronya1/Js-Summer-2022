@@ -82,18 +82,19 @@ console.log(`\ncityName -> ${cityName}`);
 console.log(`is ${cityName} start with 'New Y' : ${cityNameStartsWith_New_Y}`);
 
 /**
- * Example for ignoring pattern with StartsWith
+ * Example for ignoring pattern with StartsWith 
  */
 
 let startsWithPattern = 'neW y';
-startsWithPattern = startsWithPattern.toUpperCase();    // NEW Y
-let cityName_Uppercase = cityName.toUpperCase();        // NEW YORK CITY
-let cityNameStartsWith_neW_Y = cityName_Uppercase.startsWith(startsWithPattern);
-console.log(`\ncityName -> ${cityName}`);
-console.log(`is ${cityName} start with 'neW Y' : ${cityNameStartsWith_neW_Y}`);
+//startsWithPattern = startsWithPattern.toUpperCase();    // NEW Y
+//let cityName_Uppercase = cityName.toUpperCase();        // NEW YORK CITY
+//let cityNameStartsWith_neW_Y = cityName_Uppercase.startsWith(startsWithPattern);
+//console.log(`\ncityName -> ${cityName}`);
+//console.log(`is ${cityName} start with 'neW Y' : ${cityNameStartsWith_neW_Y}`);
 
-// let res = cityName.toUpperCase().startsWith(startsWithPattern.toUpperCase());
-// console.log(res);
+let res = cityName.toUpperCase().startsWith(startsWithPattern.toUpperCase()); // experienced coder will write line 89-93 like this 
+console.log(res);
+
 
 
 

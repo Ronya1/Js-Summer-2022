@@ -2,7 +2,7 @@
  *  Logical (&&,||,!)
  * 
  * && -> and-operator
- *      All combines conditions must be true to get final result as true 
+ *      All combined conditions must be true to get final result as true 
  *      If any one of the combined conditions are false, final result is false 
  * 
  * || -> or-operator
@@ -22,7 +22,7 @@
  * 
  * false && True
  * 
- * false -> both conditions have to be true in order to get a true, if 1 2 false its false, if 1 true 1 false its false 
+ * false -> both conditions have to be true in order to get a true, if 2 false its false, if 1 true 1 false its false 
  * 
  * 
  * age = 20 
@@ -50,7 +50,7 @@ lRes1 = lVar1 <= lVar3 && !(lVar2 === lVar3 + lVar4);
         /*
             10 <= 30 && !(20 === 30+40)
             true && !(20 === 70)
-            true && !(false)
+            true && !(false) ! this means its true as its "not false"
             true && true
             true
         */
