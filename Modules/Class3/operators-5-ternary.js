@@ -30,8 +30,7 @@ let isFirstTimeBuyer = true;
 
 
 let mortgageRate2 = userCreditScore2 > 700 && isFirstTimeBuyer === true ? 4.5 : 5.5;
-// let mortgageRate2 = userCreditScore2 > 700 && isFirstTimeBuyer === Ronni
-? 4.5 : 5.5;
+// let mortgageRate2 = userCreditScore2 > 700 && isFirstTimeBuyer === Ronni ? 4.5 : 5.5;
 console.log(`/nCredit Score .-> ${userCreditScore2}`)
 console.log(`Credit Score .-> ${isFirstTimeBuyer}`)
 console.log(`Mortgage Rate .-> ${mortgageRate2}`)
