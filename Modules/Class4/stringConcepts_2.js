@@ -35,7 +35,7 @@ input: just one input
  * return type:
  *      boolean 
 
-If the given pattern is xactly present in the string 
+If the given pattern is exactly present in the string 
     method returns true 
 Otherwise 
     method returns false

@@ -72,3 +72,13 @@ console.log(last_Character)
 let Present_Once = sentence3.toLowerCase()
 let Present_Once_REsult = Present_Once.includes(`body`)
 console.log(Present_Once_REsult)
+
+// function countOccurences(string, word) {
+//     //let loweCaseString = string.toLowerCase;
+//     return string.split(word).length - 1;
+//  }
+
+let result; 
+ if (countOccurences(sentence3, "body") == 1){
+    result = true;
+ }else result = false;
