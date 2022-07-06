@@ -82,11 +82,11 @@ console.log(`${num1} > ${num2} = ${expression3}`)
 /* Write a JavaSC program to count the letters, spaces, numbers and other 
 characters of an input string. */
 
-let sentence1 = `I dont recall going over how to count mnumbers alone, letters alone and speaces alone - all google 123`
-console.log(sentence1.length)
-let SpaceOut = (sentence1.split(` `).length - 1);
+let sentence1 = `I dont recall going over how to count mnumbers alone, letters alone and speaces alone - all google 125673`
+console.log(sentence1.length + `total characters`)
+let SpaceOut = (sentence1.split(` `).length - 1 + ` total spaces`); 
 console.log(SpaceOut)
-console.log("I dont recall going over how to count mnumbers alone, letters alone and speaces alone - all google 123".replace(/[^0-9]/g,"").length);
+console.log("I dont recall going over how to count mnumbers alone, letters alone and speaces alone - all google 125673".replace(/[^0-9]/g,"").length + ` total numbers`);
 // I googled this whole sequence as I dont recall going over this in class not sure if thats ok. 
 
 
