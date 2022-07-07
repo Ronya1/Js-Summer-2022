@@ -78,7 +78,7 @@ console.log(Present_Once_REsult)
 //     return string.split(word).length - 1;
 //  }
 
-let result; 
+/* let result; 
  if (countOccurences(sentence3, "body") == 1){
     result = true;
- }else result = false;
+ }else result = false; */

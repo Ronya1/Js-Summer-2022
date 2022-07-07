@@ -37,7 +37,7 @@ console.log(`cityName -> ${cityName}`)
 console.log(`cityName_U -> ${cityName_U}`)
 
 /**
- * Creplace original value with uppercase value
+ * replace original value with uppercase value
  */
 
 let cityName1 = `New York City`;
