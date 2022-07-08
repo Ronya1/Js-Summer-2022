@@ -8,7 +8,7 @@ let countryName = `United States` // 13
 
 /**
  * How would I solve this? 
- * first conver this statement into an array 
+ * first conver this statement into an array using split 
  * then have have a function to find the number of values in my array? 
  */
 let myStmt1 = countryName.split('');
@@ -88,12 +88,6 @@ let myNewSentence_Q3_2 = (firstWord_Upper_Q3_2 + firstWord_Lower_Q3_2 + ` ` + se
 console.log(myNewSentence_Q3_2)
 
 
-/* let findIndex = mySentence_Q3_2_Lower.charAt(12)
-console.log(findIndex) */
-/* 
-
-
-
 /**
  * Q4:
  * Create abbreviation from any 4 word sentence 
@@ -106,16 +100,11 @@ console.log(findIndex) */
 
 /**
  * How Would I Solve this? 
- * 
+ * convert string to upper case 
+ * use the substring function to pull out the first letters into variables 
+ * then concat the varaiables into a string and print in console. 
  */
 
-/* const mySentence_Q4_1 = "have a great day" // Created a const since the sentence is not changing 
-let myUpper1 = mySentence_Q4_1.toUpperCase(mySentence_Q4_1) // set all values to upper case 
-console.log(myUpper1) // printed to confirm result 
-let myArrays_1 = myUpper1.split(``) // Converted entire string to an Array using split function 
-console.log(myArrays_1) // confirmed result of Array 
-console.log(myArrays_1[0],myArrays_1[5],myArrays_1[7],myArrays_1[13]) // THIS IS WRONG YOU SHOULD USE SUBSTRING MULTIPLE TIMES STORE EACH VALUE IN A VARIABLE THEN CONCAT
- */
 
 //`have a great day` -> `HAGB`
 const mySentence_Q4_1 = "have a great day" // Created a const since the sentence is not changing 
