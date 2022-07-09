@@ -53,6 +53,16 @@ console.log(myCustomArray.length)
  * then for each of the arrays create a seperate to uppercase and to lowecase then concat the entire string into 1? 
  * 
  * Maybe uppercase the entire string then convert to Array and call upon the specific letters in the array 
+ * 
+ * YOU SHOULD HAVE SOLVED THIS QUESTION LIKE THIS: 
+ *      1. split the string using .split and treat each word as its own entity -> .split(` `)
+ *      2. Now you would do .substring (0,1) to grab the first letter only and set that .toUpperCase
+ *      3. Then do word[0].substring(1).toLowerCase
+ *      4. RESULT = word[0].substring(0,1).toUpperCase + word[0].substring(1).toLowerCase -> Have is the result
+ *      4. RESULT = word[1].substring(0,1).toUpperCase + word[1].substring(1).toLowerCase -> A is the result
+ *      4. RESULT = word[2].substring(0,1).toUpperCase + word[2].substring(1).toLowerCase -> Great is the result
+ *      4. RESULT = word[3].substring(0,1).toUpperCase + word[3].substring(1).toLowerCase -> Day is the result
+ * Store them all in their own variable and then concat the 4 - its much cleaner 
  */
 
 // `have a great day` -> `Have A Great Day` 
@@ -103,7 +113,18 @@ console.log(myNewSentence_Q3_2)
  * convert string to upper case 
  * use the substring function to pull out the first letters into variables 
  * then concat the varaiables into a string and print in console. 
+ * 
+ * THE WAY YOU SHOULD HAVE SOLVED THIS: (similar to the above)
+ YOU SHOULD HAVE SOLVED THIS QUESTION LIKE THIS: 
+ *      1. split the string using .split and treat each word as its own entity -> .split(` `)
+ *      2. Now you would do .substring (0,1) to grab the first letter only and set that .toUpperCase
+ *      4. RESULT = word[0].substring(0,1).toUpperCase -> H is the result
+ *      4. RESULT = word[1].substring(0,1).toUpperCase -> A is the result
+ *      4. RESULT = word[2].substring(0,1).toUpperCase -> G is the result
+ *      4. RESULT = word[3].substring(0,1).toUpperCase -> D is the result
+ * Store them all in their own variable and then concat the 4 - its much cleaner 
  */
+
 
 
 //`have a great day` -> `HAGB`
