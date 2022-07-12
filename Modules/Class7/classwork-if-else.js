@@ -1,4 +1,5 @@
 /*
+Question 1: 
     if name is happy, print "good name"
     if name is joy, print the name and it's length.
                     print "your name is too short"
@@ -6,32 +7,19 @@
     if name is not from above list, print "you have a different name than we expected"
 */
 
-let theName = 'joy'
-// WHAT DID I DO WRONG? 
-/* if (theName === 'happy') { command shift a 
+let theName = 'John'
+if (theName === 'happy') { 
     console.log('good name');
 } else if (theName === "joy"){
-    console.log(theName.length() + "your name is too short");
+    console.log(theName.length + "your name is too short");
 } else if  (theName === 'John') {
     console.log(theName.toUpperCase());
 } else {
     console.log('you have a different name than we expected')
-} */
+}
 
-   /**
-    * nyName === 'happy'
-    *   print "good name"
-    * myName === 'Joy'
-    *   print the name and its length.
-    *   print "your name is too short"
-    * myName === 'john'
-    *   print name in uppercase
-    * Otherwise
-    *   print "your "you have a different name than we expected"
-    * 
-    */
 
-   // Using else-if
+   // Using else-if for Q1 
    var myName = 'Joy';
    const myNameLowercase = myName.toLowerCase();
 
@@ -45,7 +33,7 @@ let theName = 'joy'
     console.log('your you have a different name than we expected')
    }
 
-   // using switch 
+   // using switch for Q1 
    switch(myName.toLowerCase()){
     case 'happy':       // myName is equal to happy, go into case block
         console.log('Good name');
@@ -113,3 +101,5 @@ let myDay = 'Mon'
  * 
  * COPY THE CODE FROM CLASS BELOW 
  */
+
+ 

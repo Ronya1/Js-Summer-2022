@@ -33,8 +33,12 @@ console.log(sentence2_Replace_All_AZ)
 
 
 // TASK 3 
-const sentence3 = "HeAlTh wAs EArlIer said To Be the AbILitY of the bOdY funcTiOnInG WElL.";
+const sentence3 = "HeAlTh wAs body EArlIer said To Be the AbILitY of the bOdY funcTiOnInG WElL.";
+// Fara Sentence "HeAlTh wAs body EArlIer said To Be the AbILitY of the bOdY funcTiOnInG WElL."
+// Original Sentence "HeAlTh wAs EArlIer said To Be the AbILitY of the bOdY funcTiOnInG WElL."
+
 /**
+ * 
  * print the result in console:
  * 1. the length of sentence-3
  * 2. does sentence-3 starts with 'health' (ignore cases)
@@ -72,6 +76,23 @@ console.log(last_Character)
 let Present_Once = sentence3.toLowerCase()
 let Present_Once_REsult = Present_Once.includes(`body`)
 console.log(Present_Once_REsult)
+
+// V2 of Question 6. word 'Body' is present only once. (true or false)
+/** How would you solve this? 
+ * convert the statement to all lower case 
+ * Then do first index of, then last index of and in the final result compare first index of === last index of 
+ */
+
+
+let present_Once_V2 = sentence3.toLowerCase()
+let presentOnce_IndexOF = present_Once_V2.indexOf('body')
+let presentOnce_Last_IndexOF = present_Once_V2.lastIndexOf('body')
+let result_V2 = presentOnce_IndexOF === presentOnce_Last_IndexOF && presentOnce_IndexOF >= 0
+
+console.log(present_Once_V2)
+console.log(presentOnce_IndexOF)
+console.log(presentOnce_Last_IndexOF)
+console.log(result_V2)
 
 // function countOccurences(string, word) {
 //     //let loweCaseString = string.toLowerCase;
