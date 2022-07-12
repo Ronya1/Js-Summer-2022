@@ -50,6 +50,20 @@ if (gradeFormula >= 91 && gradeFormula <= 100) {
  * 
  * 
  */
+// The problem is if the number is divisible by both 5 and 3 how do I get the correct output
+// value to print if the number is 15 then I should get the third if else "divisible by 5 and 3"
+// Start with the hardest condition first
+let myNumber = 19
+if ((myNumber%5 === 0) && (myNumber%3 === 0)) {
+    console.log('divisible by 5 and 3')
+} else if (myNumber%5 === 0) {
+    console.log("divisible by 5")
+} else if (myNumber%3 === 0) {
+    console.log('divisible by 3')
+} else {
+    console.log(myNumber)
+}
+
 
 /**
  * let planets = ['Earth', 'Mercury', 'Jupiter', 'Saturn', 'Mars', "Venus", 'Pluto'];
@@ -58,7 +72,37 @@ if (gradeFormula >= 91 && gradeFormula <= 100) {
  * otherwise add Earth as first name in the array, then print the entire array.
  * 
  */
+/**
+ * HOW DO I SOLVE THIS?
+ * Convert all Array values to lowercase - Not needed as we are looking for exact value 
+ * Is EARTH MENTIONED? -> .indexOf("Earth") === 0 
+ * Is it mentioned at index 0? -> True/False 
+ * If true console.log "Earth is mentioned in expected index"
+ * If false insert earth with the unShift function
+ */
+// MY CODE BELOW 
+let planets = ['Earth', 'Mercury', 'Jupiter', 'Saturn', 'Mars', "Venus", 'Pluto'];
+let isEarthPresent = planets.indexOf('Earth')
+console.log(isEarthPresent) // Earth is present at index 0
+// Use the switch method -> DID NOT WORK FOR ME 
+switch(planets.indexOf('Earth') === 0) {
+    case '0':
+        console.log("Earth is mentioned in expected index");
+        break;
+    default: console.log('not present')
+}
 
+// This one worked 
+if (planets.indexOf('Earth') === 0) {
+    console.log("Is it this one? Earth is mentioned in expected index")
+} else {
+    console.log('not present')
+}
+
+// WHAT IS EARTH WAS NOT PRESENT IN THE ARRAY? -> I would add 'Earth' like this
+let planets2 = ['Mercury', 'Jupiter', 'Saturn', 'Mars', "Venus", 'Pluto'];
+let newPlanets2 = planets2.unshift('Earth')
+console.log(planets2) 
 
 /**
  * const sports = ['Football', 'Soccer', 'BASKETBALL', 'Baseball', 'Rugby'];
@@ -68,3 +112,22 @@ if (gradeFormula >= 91 && gradeFormula <= 100) {
  * if BASKETBALL is NOT present in the array, replace index-2 value with BASKETBALL and print the value which you replaced.
  * 
  */
+/**
+ * HOW WOULD I SOLVE THIS? 
+ * Find if BASKETBALL is present in index-2 using .indexOf === 2 
+ *      if true print "BASKETBALL is present at index-2"
+ * Find if BASKETBALL is present in the string using .includes()
+ *      If ture print "BASKETBALL is mentioned in the sports array"
+ * If BASKETBALL is not present at index-2 use the .splice(arg1,arg2,arg3)
+ */
+
+ const sports = ['Football', 'Soccer', 'BASKETBALL', 'Baseball', 'Rugby'];
+ if (sports.indexOf('BASKETBALL') === 2) {
+    console.log("BASKETBALL is present at index-2")
+} else if (sports.includes('BASKETBALL')){
+    console.log('BASKETBALL is mentioned in the sports array')
+} else if (sports.splice(2,0,'BASKETBALL')) {
+        console.log(sports)
+} else {
+    console.log('complete')
+}

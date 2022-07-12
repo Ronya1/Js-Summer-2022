@@ -9,9 +9,13 @@
  * otherwise 
  *      call home 
  * 
- * isSoyMilkPresent && isSoyMilkExpiring > 7 days -> if this is fales 
- *      buy 2 soy milk
- *      buy 1 bread 
+ * isSoyaMilkPresent && isSoyaMilkExpiration > 7
+ *      buy 2 soya milk
+ *      buy 1 bread
+ * 
+ * isSoyaMilkPresent && isSoyaMilkExpiration > 7  -> false
+ *      buy 2 soya milk
+ *      buy 1 bread
  * isAlmondMilkPresent
  *      buy 1 almond milk
  * 
@@ -22,81 +26,51 @@
  * isAlmondMilkPresent -> false
  *      buy 1 almond milk
  * 
- * isSoyMilkPresent && isSoyMilkExpiring > 7 days -> if this is fales 
- *      buy 2 soy milk
- *      buy 1 bread 
- * isAlmondMilkPresent -> false
+ * isSoyaMilkPresent && isSoyaMilkExpiration > 7    -> false
+ *      buy 2 soya milk
+ *      buy 1 bread
+ * isAlmondMilkPresent                              --> false
  *      buy 1 almond milk
- * isRegularMilkPresent && isRegularMilkExpiration > 7
+ * isRegularMilkPresent && isRegularMilkExpiration > 3
  *      buy regular milk
  * 
- * * isSoyMilkPresent && isSoyMilkExpiring > 7 days -> if this is fales 
- *      buy 2 soy milk
- *      buy 1 bread 
- * isAlmondMilkPresent -> false
+ * 
+ * isSoyaMilkPresent && isSoyaMilkExpiration > 7                -> false
+ *      buy 2 soya milk
+ *      buy 1 bread
+ * isAlmondMilkPresent                                          -> false
  *      buy 1 almond milk
- * isRegularMilkPresent && isRegularMilkExpiration > 7
+ * isRegularMilkPresent && isRegularMilkExpiration > 3          -> false
  *      buy regular milk
- * If all the above conditions are false 
- *      call home
+ * if all above conditions are false
+ *      call at home
  * 
  */
 
 /**
- * get soy milk if its not expiring within 7 days 
- *      if true then buy 2 soy milk
- *      and buy 1 bread 
+ * check for soya milk and if it's not expiring within 7 days
+ *      buy 2 soya milk
+ *      and buy 1 bread
  * check time if past 12
- *      say good afternoon
+ *      say Good Afternoon
  * 
  * 
- * isSoyMilkPresent && isSoyMilkExpiring > 7 days -> if this is fales 
- *      buy 2 soy milk
- *      buy 1 bread 
- * time >= 12 
- *      say "good Afternoon"
- * 
- */
-
-/**
- * 
- * mon, thur and there is no meeting 
- *      work from home 
- * other weekdays or there is meeting 
- *      work from office 
- * weekends
- *      enjoy
- * 
- * var dayName = '';
- * var isMeeting = true/false;
- * 
- * 
- * ('dayName === 'Mon' or dayName === "Thur") && isMeeting !== true // (can write it cleaner like this store the boolean value in a variable)
- *      I can work from home 
- * ('dayName ===Tues or dayName === Wed or dayName === 'Fri") or isMeeting === true
- *      I should go to office 
- * dayName === sun or dayName is === Sat'
- *      I must enjoy 
- * otherwise
- *      Incrrect dayName
- * 
- * 
+ * isSoyaMilkPresent && isSoyaMilkExpiration > 7
+ *      buy 2 soya milk
+ *      buy 1 bread
+ * time >= 12
+ *      say "Good Afternoon"
  * 
  */
 
 /**
- * Conditional Colde Blocks (conditional loops)
- * 1. if-else statements 
- * 2. switch block 
- * 
- * 
+ * Conditional Code Blocks (Conditional loop)
+ *  1. if-else block
+ *  2. switch block
+ *  
  * when we have different actions to do (code to execute) depending upon condition(s)
  * 
- * 
  */
-
-var dayName = ''
-var isMeeting = true;  // or false 
 
 /**
  * syntax for if-block
@@ -106,69 +80,60 @@ var isMeeting = true;  // or false
  *      code will execute if consition(s) result into true
  * }
  * 
- * 
  */
 
-if (2 === 12) {
+ if (2 === 12) {
     console.log('Hello World')
 }
 let countryName = 'UniTEd StaTEs Of AMEriCa'
-
 /**
- * if country name is united states of america, print the country name in uppercase 
+ * if country name is United states of america, print the country name in uppercase
  * 
  * countryName == 'United states of america' (ignore case)
- *      countryName -> lowecase -> 'united states of america'
- *      united states of america -> lowercase -> united states of america 
+ *      countryName -> lowercase -> 'united states of america'
+ *      United states of america -> lowercase -> united states of america
  *      to compare -> localCompare (cannot ignore cases)
  * 
- * countryName into uppercase
- * if (countryName == 'united states of america')
- * 
- * 
- * 
  */
-let countryNameLowercase = countryName.toLowerCase()
-let toExpectedCounrtyName = 'united states of america'.toLowerCase()
+ let countryNameLowercase = countryName.toLowerCase();
+ let toExpectedCounrtyName = 'united states of america'.toLowerCase();
+ if (countryNameLowercase.localeCompare(toExpectedCounrtyName) === 0) {
+     console.log(countryName.toUpperCase());
+ } 
 
-if (countryNameLowercase.localeCompare(toExpectedCounrtyName) === 0) {
-    console.log(countryName.toUpperCase());
-} 
+// if (countryName.toLowerCase() === 'United states of america'.toLowerCase()) {
+//     console.log(countryName.toUpperCase());
+// }
 
+
+/* 
+if country name is united states of america, print the country name in uppercase 
+if country name is NOTunited states of america, print "You are not USA Citizen" 
+  
+countryName == 'United states of america' (ignore case)
+countryName -> lowecase -> 'united states of america'
+united states of america -> lowercase -> united states of america 
+to compare -> localCompare (cannot ignore cases)
+  */
+ 
 /**
- * if country name is united states of america, print the country name in uppercase 
- * if country name is NOTunited states of america, print "You are not USA Citizen" 
- * 
- * countryName == 'United states of america' (ignore case)
- *      countryName -> lowecase -> 'united states of america'
- *      united states of america -> lowercase -> united states of america 
- *      to compare -> localCompare (cannot ignore cases)
- * 
- * countryName into uppercase
- * if (countryName == 'united states of america')
- * 
- */
-/**
- * syntax:
+ * Syntax:
  * 
  * if (condition(s)) {
  *      if block
- *      code will execute if condition(s) are true
+ *      code will execute if condition(s) result into true
  * } else {
  *      else block
  *      code will execute if condition(s) result into false
  * }
  */
- countryName = 'UniTEd StaTEs Of AMEriCa'
- countryNameLowercase = countryName.toLowerCase()
-if (countryNameLowercase.localeCompare(toExpectedCounrtyName) === 0) {
-    console.log(countryName.toUpperCase());
-} else {
-    console.log(`\nYOU are not USA Citizen`)
-}
-    
-
-
+ countryName = 'UiTEd StATEs Of AMErICa';
+ countryNameLowercase = countryName.toLowerCase();
+ if (countryNameLowercase.localeCompare(toExpectedCountryName) === 0) {
+     console.log(countryName.toUpperCase());
+ } else {
+     console.log('\nYou are not USA Citizen');
+ }
 
 /**
  * 
@@ -183,24 +148,22 @@ if (countryNameLowercase.localeCompare(toExpectedCounrtyName) === 0) {
  * var isMeeting = true/false;
  * 
  * 
- * ('dayName === 'Mon' or dayName === "Thur") && isMeeting !== true // (can write it cleaner like this store the boolean value in a variable)
+ * (dayName === 'Mon' or dayName === "Thur") && isMeeting !== true // (can write it cleaner like this store the boolean value in a variable)
  *      I can work from home 
- * ('dayName ===Tues or dayName === Wed or dayName === 'Fri") or isMeeting === true
+ * (dayName == Tues or dayName == Wed or dayName == 'Fri") or isMeeting === true
  *      I should go to office 
  * dayName === sun or dayName is === Sat'
  *      I must enjoy 
  * otherwise
  *      Incrrect dayName
- * 
  */
 /**
- * if - else if - else block 
+ * if - else if - else block
  */
+ console.log('Before if-else block');
 
- console.log('Before if-else block')
-
-var dayName = 'mon';
-var isMeeting = true; // or false
+var dayName = 'mon'
+var isMeeting = true;  // or false 
 
 // || means pipes -> you can do as many "else if" as you want but "else" must always be the end. 
 if ((dayName === 'mon' || dayName === 'thur') && !isMeeting){
@@ -236,14 +199,33 @@ if (sports.includes('swimming')) {
 // print sports array ; will swimming be part of sports list
 console.log(sports)
 
-
-
+/*
+    if num = 2 , print (num is two)
+    if num is equal to 5, print "num is five")
+    if num is equal to 15, print "num is fifteen")
+    if num is equal to 10, print "num is ten")
+    if num is equal to 20, print "num is twenty")
+ */
+    let num = 10;
+    if (num === 2) {
+        console.log(('num is two'));
+    } else if (num === 5) {
+        console.log(('num is five'));
+    } else if (num === 15) {
+        console.log(('num is fifteen'));
+    } else if (num === 10) {
+        console.log(('num is ten'));
+    } else if (num === 20) {
+        console.log(('num is twenty'));
+    } else {
+        console.log(`num is ${num}`);
+    }
 
 
 /**
  * switch-block
  * 
- * 1. all conditions are related to only 1 variable
+ * 1. all conditions are related to only ONE variable
  * 2. all conditions are comparing equals 
  * 3. for every block, we must have only 1 condition 
  * 
@@ -276,12 +258,26 @@ console.log(sports)
  * 
  */
 
+ console.log('\nswitch block\n');
 
-
-
-
-
-
-
-
+ switch (num) {
+     case 2:
+         console.log('num is two');
+         break;
+     case 5:
+         console.log('num is five');
+         break;
+     case 10:
+         console.log('num is ten');
+         break;
+     case 15:
+         console.log('num is fifteen');
+         break;
+     case 20:
+         console.log('num is twenty');
+         break;
+     default:
+         console.log(`num is ${num}`);
+         break;
+ }
 
