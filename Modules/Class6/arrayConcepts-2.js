@@ -135,7 +135,7 @@ console.log(`\narrayFromSplice1 -> ${arrayFromSplice1}`);
 
 console.log(`\nplanets -> ${planets}`); // this will return the new values we added to the array 
 
-const arrayFromSplice2 = planets.splice(3,2);) // it starts at index 3 and deletes 2 value, nothing added
+const arrayFromSplice2 = planets.splice(3,2); // it starts at index 3 and deletes 2 value, nothing added
 console.log(`\narrayFromSplice2 -> ${arrayFromSplice2}`);   // B,C
 console.log(`\nplanets -> ${planets}`); // planets -> SAturN,EARth,A,D,MaN MadE planeT,VeNUS,JuIPteR,Pluto,SatuRN
 

@@ -171,3 +171,80 @@ console.log(letterW_Q4_3)
 console.log(letterA_Q4_3)
 let myTitleCase_Q4_3 = (letterY_Q4_3 + letterN_Q4_3 + letterW_Q4_3 + letterA_Q4_3)
 console.log(myTitleCase_Q4_3) // Prints YLOO
+
+
+
+// REVISED HOMEWORK DONE THE RIGHT WAY - By the right way I mean we will be able to put it in a loop and its repeatable. 
+
+/**
+ * Q3: 
+ * Convert any 4 word sentence into Titlecase and 
+ * 
+ * 
+ * `have a great day` -> `Have A Great Day` 
+ * `YOu lIVe ONlY ONcE` -> `You Live Only Once`
+ */
+
+/** How would you solve this? 
+ * First convert the entire sentence to upper case 
+ * Then create an array and treat every word as its own array 
+ * Then pull index 0 and set it toUpperCase
+ * Then pull the remaining indexes and set them toLowerCase 
+ */
+
+// converted sentence to all upper case -> same applies to the second sentence (can do it later not a priority)
+const myRevised_Q3_2 = 'have a great day'
+const myRevised_Q3_2_AllUpper = myRevised_Q3_2.toUpperCase('have a great day')
+console.log(myRevised_Q3_2_AllUpper)
+
+// converted all uppercase string into an array (each word is its own value / seperate entity)
+let New_Arr = myRevised_Q3_2_AllUpper.split(" ")
+console.log(New_Arr)
+
+// Now take the arrays and call upon index-0 and set to upper case and teh rest to lowercase 
+let firstWord = New_Arr[0].substring(0,1).toUpperCase() + New_Arr[0].substring(1).toLowerCase() + ' '
+let secondWord = New_Arr[1].substring(0,1).toUpperCase() + ' '
+let thirdWord = New_Arr[2].substring(0,1).toUpperCase() + New_Arr[2].substring(1).toLowerCase() + ' '
+let fourhtWord = New_Arr[3].substring(0,1).toUpperCase() + New_Arr[3].substring(1).toLowerCase()
+
+let myNewSentence_Q3_2_Revised = firstWord + secondWord + thirdWord + fourhtWord
+console.log(myNewSentence_Q3_2_Revised)
+
+
+
+
+
+/**
+ * Q4:
+ * Create abbreviation from any 4 word sentence 
+ * 
+ * `have a great day` -> `HAGB`
+ * `YOu lIVe ONlY ONcE` -> `YLOO`
+ * `yOu neVER WaLK alOne` -> `YNWA`
+ * 
+ */
+
+/**
+ * HOW WOULD YOU SOLVE THIS?
+ * 1.) convert the sentence into all upper case 
+ * 2.) convert each word using split into its own array
+ * 3.) call upon index 0 of the array and then concat them 
+ */
+// set to all upper 
+const revised_Q4_2 = `have a great day`
+const revised_Q4_2_Upper = revised_Q4_2.toUpperCase()
+console.log(revised_Q4_2_Upper)
+
+// converted to an array
+let myNewArr_Q4_2 = revised_Q4_2_Upper.split(' ') 
+console.log(myNewArr_Q4_2)
+
+// pull each letter using substring and set to uppercase 
+let firstWord_Q4_2 = myNewArr_Q4_2[0].substring(0,1).toUpperCase()
+let secondWord_Q4_2 = myNewArr_Q4_2[1].substring(0,1).toUpperCase()
+let thirdWord_Q4_2 = myNewArr_Q4_2[2].substring(0,1).toUpperCase()
+let fourhtWord_Q4_2 = myNewArr_Q4_2[3].substring(0,1).toUpperCase()
+let newAbbreviation_Q4_2 = firstWord_Q4_2 + secondWord_Q4_2 + thirdWord_Q4_2 + fourhtWord_Q4_2
+console.log(newAbbreviation_Q4_2)
+
+
