@@ -84,22 +84,22 @@ if ((myNumber%5 === 0) && (myNumber%3 === 0)) {
 let planets = ['Earth', 'Mercury', 'Jupiter', 'Saturn', 'Mars', "Venus", 'Pluto'];
 let isEarthPresent = planets.indexOf('Earth')
 console.log(isEarthPresent) // Earth is present at index 0
-// Use the switch method -> DID NOT WORK FOR ME 
-switch(planets.indexOf('Earth') === 0) {
-    case '0':
-        console.log("Earth is mentioned in expected index");
+// Use the switch method -> No point in doing it this way If else is better
+switch(isEarthPresent) {
+    case 0:
+        console.log("Switch Method -> Earth is mentioned in expected index");
         break;
     default: console.log('not present')
 }
 
-// This one worked 
+// If Else Method 
 if (planets.indexOf('Earth') === 0) {
-    console.log("Is it this one? Earth is mentioned in expected index")
+    console.log('If else -> Earth is mentioned in expected index')
 } else {
     console.log('not present')
 }
 
-// WHAT IS EARTH WAS NOT PRESENT IN THE ARRAY? -> I would add 'Earth' like this
+// WHAT IF EARTH WAS NOT PRESENT IN THE ARRAY? -> I would add 'Earth' like this
 let planets2 = ['Mercury', 'Jupiter', 'Saturn', 'Mars', "Venus", 'Pluto'];
 let newPlanets2 = planets2.unshift('Earth')
 console.log(planets2) 
@@ -122,12 +122,14 @@ console.log(planets2)
  */
 
  const sports = ['Football', 'Soccer', 'BASKETBALL', 'Baseball', 'Rugby'];
+ const ind_2 = sports[2]
  if (sports.indexOf('BASKETBALL') === 2) {
     console.log("BASKETBALL is present at index-2")
 } else if (sports.includes('BASKETBALL')){
     console.log('BASKETBALL is mentioned in the sports array')
 } else if (sports.splice(2,0,'BASKETBALL')) {
-        console.log(sports)
+        console.log(ind_2) // when replacing value in array instruction was to print the 
+        //value which was replaced therefore value was stroed seperately.  
 } else {
     console.log('complete')
 }
