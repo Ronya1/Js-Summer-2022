@@ -81,17 +81,21 @@ if ((myNumber%5 === 0) && (myNumber%3 === 0)) {
  * If false insert earth with the unShift function
  */
 // MY CODE BELOW 
-let planets = ['Earth', 'Mercury', 'Jupiter', 'Saturn', 'Mars', "Venus", 'Pluto'];
+let planets = ['Mercury', 'Jupiter', 'Saturn', 'Mars', "Venus", 'Pluto'];
 let isEarthPresent = planets.indexOf('Earth')
+// let earthNotPresent = planets.unshift('Earth')
 console.log(isEarthPresent) // Earth is present at index 0
 // Use the switch method -> No point in doing it this way If else is better
 switch(isEarthPresent) {
     case 0:
         console.log("Switch Method -> Earth is mentioned in expected index");
         break;
-    default: console.log('not present')
+    default: console.log(`switch method -> ${planets.unshift('Earth')}`)
 }
+console.log(planets)
 
+
+// 'not present'
 // If Else Method 
 if (planets.indexOf('Earth') === 0) {
     console.log('If else -> Earth is mentioned in expected index')

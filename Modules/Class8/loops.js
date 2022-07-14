@@ -3,7 +3,7 @@
  * 
  * Everything can be done with these 3 and the last 3 are jsut smarter ways to do this. 
  * for 
- * whole
+ * while
  * do-while
  * 
  *  
@@ -45,6 +45,7 @@ console.log("Hellow WOrld!"); // 20      Counter <=20
  * for (Initilization  ; condition ; incremental) 
  *      for-loop 
  *      code block
+ *      code will keep executing until the condition is true
  * }
  */
 
@@ -118,20 +119,31 @@ for (let counter = 0 ; counter <= sports.length-1 ; counter++) {
   * baseball
   * Rugby
   */
-  console.log(sports[0]);
-  console.log(sports[2]);
-  console.log(sports[4]);
+  // const sports = ['Football', 'Soccer', 'BASKETBALL', 'Baseball', 'Rugby'];
+console.log('\n\nPrint only even index in array problem\n\n');
+/**
+ * Print values present on even-index
+ * 
+ * eg: 
+ * Football
+ * BASKETBALL
+ * Rugby
+ */
+console.log(sports[0]);
+console.log(sports[2]);
+console.log(sports[4]);
 
-for (let counter = 0 ; counter <= sports.length-1 ; counter+=2) {      // i=0,2,4,6,etc
-    console.log(sports[counter]);
+for (let i = 0 ; i <= sports.length-1 ; i+=2) {     // i = 0, 2, 4
+    console.log(sports[i]);
 }
 
-for (let counter = 0 ; counter <= sports.length-1 ; counter+=2) {   // i=0,2,4,6,etc
-       if(counter % 2 === 0) {
-            console.log(sports[counter]);
-       }
-} 
+for(counter = 0; counter <= sports.length - 1; counter++) {     // counter = 0, 1, 2, 3, 4
+    if (counter % 2 === 0) {
+        console.log(sports[counter]);
+    }
+}
 
+console.log('\n\nAbbreviation problem\n\n');
 /**
  * Create abbreviation for any sentence
  * 
@@ -142,41 +154,32 @@ for (let counter = 0 ; counter <= sports.length-1 ; counter+=2) {   // i=0,2,4,6
  * 
  */
 
-
-
 /**
- * split the sentence into an array -> 'have a great day'
+ *  split the sentence -> ['HAVE' , 'A' , 'GREAT' , 'DAY']
  * 
- * pick index-0 value ('have') 
- * how to get first-character from a string -> (charAt(0) or substring(0,1))
- * convert into uppercase ('H')
- * abbr = "H"
+ *  pick index-0 value ('have')
+ *  how get first-character from a String (charAt(0) / substring(0,1))
+ *  abbr = abbr + 'H'   // abbr = H
  * 
- * * split the sentence into an array -> 'have a great day'
+ *  pick index-1 value ('a')
+ *  how get first-character from a String (charAt(0) / substring(0,1))
+ *  abbr = abbr + 'A'   // abbr = HA
  * 
- * pick index-1 value ('A') 
- * how to get first-character from a string -> (charAt(0) or substring(0,1))
- * convert into uppercase ('A')
- * abbr = abbr + "A" // abbr = HA
+ *  pick index-2 value ('great')
+ *  how get first-character from a String (charAt(0) / substring(0,1))
+ *  abbr = abbr + 'G'   // abbr = HAG
  * 
- * pick index-2 value ('G') 
- * how to get first-character from a string -> (charAt(0) or substring(0,1))
- * convert into uppercase ('G')
- * abbr = abbr + "G" // abbr = HAG
- * 
- * pick index-3 value ('D') 
- * how to get first-character from a string -> (charAt(0) or substring(0,1))
- * convert into uppercase ('D')
- * abbr = abbr + "D" // abbr = HAGD
+ *  pick index-3 value ('day')
+ *  how get first-character from a String (charAt(0) / substring(0,1))
+ *  abbr = abbr + 'D'   // abbr = HAGD
  * 
  * 
- * console.log(abbr)
+ *  console.log(abbr)
  * 
- * to string 
  */
 // WHAT IS THIS?
 const sentence1 = 'have a great day'
-let abbr = '';
+let abbr = '';// to store results of each loop eteration
 const sentenceWords = sentence1.toUpperCase().split(' ');
 
 for (let i=0 ; i <= sentenceWords.length-1 ; i++) {
@@ -205,10 +208,10 @@ console.log(abbr) */
  * Football
  * 
  */
-console.log(`\n\nabbreviation problem\n\n`)
+console.log('\n\nReverse array problem\n\n');
 const sports1 = ['Football', 'Soccer', 'BASKETBALL', 'Baseball', 'Rugby'];
-let sportWords = sports1.reverse()
-for (let i=0 ; i < sportWords.length-1 ; i++) {
+let sportWords = sports1.reverse() //['Football', 'Soccer', 'BASKETBALL', 'Baseball', 'Rugby'] 
+for (let i=0 ; i <= sportWords.length-1 ; i++) {
     console.log(sportWords[i])
 }
 
@@ -250,6 +253,7 @@ console.log(sportWords)
  * }
  */
  
+console.log('\nUsing while-loop');
 let w = 0
  while(w <= sports.length-1) {
     console.log(sports[w]);
@@ -264,11 +268,13 @@ let w = 0
  * do {
  *      do-whole loop
  *      code block
- *      code will execute
+ *      code will keep executing until the condition is true
  *      Increment/decrement
  * } while (condition);
  * 
  *  ->  code inside the do while loop will always run at least once since you have no pre conditions before entering the loop 
+ *  -> For first execution do-while loop doesn't check any condition.
+ *      whereas for/while loop does check condition from first execution.
  */
  console.log(`\n\nusing do while loop\n\n`)
 let d = 0
