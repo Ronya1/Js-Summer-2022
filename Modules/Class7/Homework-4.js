@@ -18,6 +18,13 @@
  * 
  * Grade -> C
  */
+/**
+ * HOW WOULD YOU SOLVE THIS? 
+ * 1. set your variables student score and expected score 
+ * 2. create a variable for grading formula to convert the grade out of 100 points 
+ * 3. if grade formual >=91 and <= 100 give score A else if etc. 
+ * 4. If grade formula is < 0 and > 100 print "Invalid student score"
+ */
 let studentScore = 40
 let maxScore = 50
 let gradeFormula = (studentScore / maxScore * 100 )
@@ -74,11 +81,11 @@ if ((myNumber%5 === 0) && (myNumber%3 === 0)) {
  */
 /**
  * HOW DO I SOLVE THIS?
- * Convert all Array values to lowercase - Not needed as we are looking for exact value 
- * Is EARTH MENTIONED? -> .indexOf("Earth") === 0 
- * Is it mentioned at index 0? -> True/False 
- * If true console.log "Earth is mentioned in expected index"
- * If false insert earth with the unShift function
+ * 1. create planets variable 
+ * 2. create another variable to find the index of 'Earth' using index of
+ * 3. then compare the is earth present variable at index 0 if true then "Earth is mentioned in expected index"
+ * 4. if not present at index 0 default set to planets.unshift which will add the Earth value to array at index 0
+ * 5. console.log the final statement of planets 
  */
 // MY CODE BELOW 
 let planets = ['Mercury', 'Jupiter', 'Saturn', 'Mars', "Venus", 'Pluto'];
@@ -91,7 +98,7 @@ switch(isEarthPresent) {
         console.log("Switch Method -> Earth is mentioned in expected index");
         break;
     default: console.log(`switch method -> ${planets.unshift('Earth')}`)
-}
+} 
 console.log(planets)
 
 
@@ -100,13 +107,9 @@ console.log(planets)
 if (planets.indexOf('Earth') === 0) {
     console.log('If else -> Earth is mentioned in expected index')
 } else {
-    console.log('not present')
+    console.log(planets.unshift('Earth'))
 }
-
-// WHAT IF EARTH WAS NOT PRESENT IN THE ARRAY? -> I would add 'Earth' like this
-let planets2 = ['Mercury', 'Jupiter', 'Saturn', 'Mars', "Venus", 'Pluto'];
-let newPlanets2 = planets2.unshift('Earth')
-console.log(planets2) 
+console.log(planets)
 
 /**
  * const sports = ['Football', 'Soccer', 'BASKETBALL', 'Baseball', 'Rugby'];
@@ -132,8 +135,9 @@ console.log(planets2)
 } else if (sports.includes('BASKETBALL')){
     console.log('BASKETBALL is mentioned in the sports array')
 } else if (sports.splice(2,0,'BASKETBALL')) {
-        console.log(ind_2) // when replacing value in array instruction was to print the 
-        //value which was replaced therefore value was stroed seperately.  
+        console.log(ind_2) // when replacing value in array the instruction was to print the 
+        //value which was replaced therefore if Basketball was not in Array, baseball would be at index-2 and would.
+        // have been repalced   
 } else {
     console.log('complete')
 }
