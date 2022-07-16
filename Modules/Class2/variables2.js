@@ -46,6 +46,7 @@ console.log(myName);
  *      gender: `M`
  *      course: `QA`
  *      payment: `payment plan'}
+ * }
  * 
  * var Student2 = {
  *      name: 'Happy"
@@ -53,6 +54,7 @@ console.log(myName);
  *      location: `USA`
  *      gender: `M`
  *      course: `QA`
- *      payment: `paid full'}
+ *      payment: `paid full'
+ * }
  * 
  */
