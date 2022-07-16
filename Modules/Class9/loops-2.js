@@ -196,3 +196,6 @@ for (const character of myString) {
      inside forEach loop, we write function and function contains bunch of code lines
  */
  
+ 
+ 
+
