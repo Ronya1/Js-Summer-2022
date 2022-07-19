@@ -260,7 +260,7 @@ let w = 0
     w++
  }
 
- // they say not to do do while loops 
+ // they say not to do do-while loops 
 /**
  * do-while loop
  * 
