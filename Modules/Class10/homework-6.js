@@ -123,10 +123,9 @@ console.log(`\n\npage break\n\n`)
  */
 
  function toTotalArray (numbers) {
- let myNumbers1 = numbers 
  let storeOfVal = 0;
- for (i = 0 ; i <= myNumbers1.length-1 ; i++) {
-    storeOfVal = storeOfVal + myNumbers1[i];
+ for (i = 0 ; i <= numbers.length-1 ; i++) {
+    storeOfVal = storeOfVal + numbers[i];
     }
     return storeOfVal
 }
@@ -149,10 +148,9 @@ console.log(`\n\npage break\n\n`)
  */
 
  function toAverageArray (numbers2) {
-    let myNumbers1 = numbers2 
     let storeOfVal = 0;
-    for (i = 0 ; i <= myNumbers1.length-1 ; i++) {
-       storeOfVal = storeOfVal + myNumbers1[i] / numbers2.length;
+    for (i = 0 ; i <= numbers2.length-1 ; i++) {
+       storeOfVal = storeOfVal + numbers2[i] / numbers2.length;
        }
        return storeOfVal
  }
