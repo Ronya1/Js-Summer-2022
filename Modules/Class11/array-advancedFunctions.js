@@ -35,9 +35,9 @@
   * 
   */
  
- siblingNames = siblingNames.map(convertIntoUppercase);
+ siblingNames = siblingNames.map(convertIntoUppercase); // best practice is to create the function outside of the .map() function
      // OR
- // siblingNames = siblingNames.map(sName => sName.toUpperCase());
+ // siblingNames = siblingNames.map(sName => sName.toUpperCase()); // this is creating the function inside the .map() function 
  
  
  console.log(siblingNames);      // ['DEEPAK', 'HEENA', 'GIGI', 'YURI'];
@@ -102,9 +102,9 @@
  // find the first value in the array which is greater than 5
  let firstIndexPassesCondition = numbers1.findIndex(num => num > 5);
  
- console.log(firstIndexPassesCondition);
+ console.log(firstIndexPassesCondition); // result will be 1 for index 1 
  
- console.log(numbers1[firstIndexPassesCondition]);
+ console.log(numbers1[firstIndexPassesCondition]); // result will be the number 6 
  
  
  /**
@@ -126,7 +126,9 @@
      {ssn:4444, age:12, state:'CA'}
  ];
  
- const myCitizen = citizens.find(citizen => citizen.ssn === 3333 || citizen.state === 'NY');
+ // Create the variable -> create the new variable -> select the variable you want to search -> then .forTheDrillDown -> must be "xyz condition"
+ const myCitizen = citizens.find(citizen => citizen.ssn === 3333 || citizen.state === 'NY'); // will print the NY line 2 as 
+ //it searched and that was the 1st one that met the conditions line 3 did not execute because it was an or statement ||
  
  console.log(myCitizen);
  
