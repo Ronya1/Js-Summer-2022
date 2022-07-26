@@ -80,9 +80,10 @@ console.log(storeOfVal)
  * [1, -1] -> 0/2 -> 0
  */
 let myAverage = [1, 2, 3, 4, 5] // 15/5 = 3
+let numLeng = myAverage.length
 let myAvg = 0;
 
 for (i = 0 ; i <= myAverage.length-1 ; i++) {
-    myAvg = myAvg + myAverage[i] / 5; 
+    myAvg = myAvg + myAverage[i] / numLeng; 
 }
 console.log(myAvg)
