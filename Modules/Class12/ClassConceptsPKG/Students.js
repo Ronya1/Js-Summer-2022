@@ -1,6 +1,6 @@
 const MyStringFunctions = require("./MyStringFunctions");
 
-    // Array of objects
+    // Array of course-objects
     const courseDetails = [
         {
             courseName : 'Automation',
@@ -77,12 +77,57 @@ class Students {
     }
 
     /**
-     * we want object which has name as courseName
+     * we want course-object which has name as checkForCourse
      */
     isCourseNameValid(checkForCourse) {
         return courseDetails.find(course => course.courseName.toLowerCase().localeCompare(checkForCourse.toLowerCase()) === 0);
     }
 
+    /**
+    * we want course-object which has name as checkForCourse
+    */
+    // isCourseNameValid(checkForCourse) {
+    //     let matchedCourseObject;
+    //     for (const courseOject of courseDetails) {
+    //         if (courseOject.courseName.toLowerCase().localeCompare(checkForCourse.toLowerCase()) === 0) {
+    //             matchedCourseObject = courseOject;
+    //             break;
+    //         }
+    //     }
+    //     return matchedCourseObject;
+    // }
+
+    /*
+        Array of course-objects
+        const courseDetails = [
+            {
+                courseName : 'Automation',
+                price : 1000,
+                length : 6
+            },
+            {
+                courseName : 'QA',
+                price : 2000,
+                length : 8
+            },
+            {
+                courseName : 'Mobile',
+                price : 3000,
+                length : 12
+            }
+        ]
+
+        pick an course-object from array
+        if (course-object.courseName === checkForCourse)
+            return course-object
+
+        arrayName[0].courseName === checkForCourse
+            return arrayName[0]
+
+        arrayName[1].courseName === checkForCourse
+            return arrayName[1]
+
+    */
 
 
 }
