@@ -66,6 +66,7 @@ class Students extends Members {
             console.log("\nDO NOT ENROLL");
         }
     }
+    // update the original course name in the values 
 
 
     showMyDetails() {
@@ -113,6 +114,22 @@ class Students extends Members {
      *      then print -> You are already enrolled in the course
      * 
      */
+
+    ChangeCourse(newCourseName) {
+        if (this.#isCourseNameValid(newCourseName) && this.#student.sCourseDetails.courseName.toLowerCase().localeCompare(newCourseName.toLowerCase()) !== 0) {
+            const potato = this.#isCourseNameValid(newCourseName);
+            this.#student.sCourseDetails.courseName = potato.courseName;
+            this.#student.sCourseDetails.coursePrice = potato.price;
+            this.#student.sCourseDetails.courseLength = potato.length;
+            this.#student.sBalance = potato.price;
+    } if (!this.#isCourseNameValid(newCourseName)) {
+            console.log('Invalid course name')
+    } 
+    //console.log(this.#student.sCourseDetails.courseName)
+    /* if (this.#student.sCourseDetails.courseName.toLowerCase().localeCompare(newCourseName.toLowerCase()) == 0)
+        console.log('You are already enrolled in the course') */
+
+}
 
     /**
      * makePayment

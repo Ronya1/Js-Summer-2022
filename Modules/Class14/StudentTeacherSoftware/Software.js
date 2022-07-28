@@ -67,3 +67,8 @@ s2.showMyDetails();
 const s3 = new Students('kiAN', 21, 'uSa', 'moBiLE');
 
 s3.showMyDetails();
+
+s1.ChangeCourse('Chicken');
+
+//s1.showMyDetails();
+
