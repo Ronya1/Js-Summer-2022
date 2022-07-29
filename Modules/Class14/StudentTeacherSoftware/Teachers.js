@@ -1,13 +1,21 @@
-const Members = require("./Members");
+//const Members = require("./Members");
+const MyStringFunctions = require("./MyStringFunctions");
 
-class Teachers extends Members {
+
+
+const teachersCourses = ['QA', 'Automation', 'Mobile']; // must be created outside of the class 
+
+class Teachers  {       // extends Members
+    
 
     static idValue = 0;
-
-    teacher = {
+    #teacher = {
+        tName : '',
+        tAge : 0,
+        tCountry : '',
         tId : 0,
         tCourseName : '',
-        tSalary : 0
+        tSalary : 0,
     }
 
     /**
@@ -17,13 +25,50 @@ class Teachers extends Members {
      * teacherCourseName should be Automation, QA or Mobile
      * 
      */
-    hiring(teacherName, teacherAge, teacherCountry, teacherCourseName) {
-        // 
+
+    teacherHired(teacherName, teacherAge, teacherCountry, teacherCourse){
+        if (teacherAge >= 21 && this.isCourseValid(teacherCourse)){
+            this.#teacher.tName = teacherName;
+            this.#teacher.tAge =  teacherAge;
+            this.#teacher.tCountry = teacherCountry;
+            this.#teacher.tCourseName = teacherCourse;
+            console.log("hired");
+        } else {
+            console.log('Not Hired')
+        }
     }
 
-    showMyDetails() {
-        // code
+    isCourseValid(checkCourse) {
+        let result = false;
+        for (let i = 0; i <=teachersCourses.length-1; i++) {
+            result = teachersCourses[i].toLowerCase().localeCompare(checkCourse.toLowerCase()) === 0
+        } 
+         if(result){
+            console.log('Course is valid')
+        } else {
+            console.log('Course is not valid')  
+        } return result
     }
+
+    /* isCourseValid(checkCourse) {
+        let result = false;
+        for (let i = 0; i <=teachersCourses.length-1; i++) {
+            if (teachersCourses[i].toLowerCase().localeCompare(checkCourse.toLowerCase()) === 0) {
+                result = true
+            } 
+        }
+        if(result){
+            console.log('Course is valid')
+        }
+        else{
+            console.log('Course is not valid')  
+        }
+    } */
+
+    showMyDetails() {
+      console.log(this.#teacher.tAge);
+      console.log(this.#teacher.tName);
+   }
 
     changeTeachingCourse() {
         // code
@@ -66,4 +111,4 @@ class Teachers extends Members {
     }
 
 
-}
+} module.exports = Teachers;

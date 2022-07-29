@@ -1,5 +1,6 @@
+const Members = require('./Members');
 const Students = require('./Students');
-
+const Teachers = require('./Teachers');
 
 const s1 = new Students('jOHn', 20, 'USA', 'mobile');
 /*
@@ -68,7 +69,23 @@ const s3 = new Students('kiAN', 21, 'uSa', 'moBiLE');
 
 s3.showMyDetails();
 
-s1.ChangeCourse('Chicken');
-
+s1.ChangeCourse('Mobile');
+console.log(`\n\n\n`);
 //s1.showMyDetails();
 
+// Testing Payment Function 
+s1.makePayment(1500)
+//s1.showMyDetails();
+//s1.makePayment(10)
+//s1.showMyDetails();
+
+console.log(`\n\n\n`);
+console.log(`hello`)
+
+const t1 = new Teachers();
+t1.teacherHired('John', 22, 'USA', "potato");
+
+//t1.validateCourse('mobile');
+
+//t1.isCourseValid('mobile');
+//t1.showMyDetails();

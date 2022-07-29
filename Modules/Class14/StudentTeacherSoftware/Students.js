@@ -117,18 +117,18 @@ class Students extends Members {
 
     ChangeCourse(newCourseName) {
         if (this.#isCourseNameValid(newCourseName) && this.#student.sCourseDetails.courseName.toLowerCase().localeCompare(newCourseName.toLowerCase()) !== 0) {
+            //const showIt = this.showMyDetails()
             const potato = this.#isCourseNameValid(newCourseName);
             this.#student.sCourseDetails.courseName = potato.courseName;
             this.#student.sCourseDetails.coursePrice = potato.price;
             this.#student.sCourseDetails.courseLength = potato.length;
             this.#student.sBalance = potato.price;
+            console.log(`\nSuccess! Your Course Has Been Updated.\nYour New Course Details Are Below \nCourse Name: ${this.#student.sCourseDetails.courseName}\nCourse Price: ${this.#student.sCourseDetails.coursePrice}\nCourse Length: ${this.#student.sCourseDetails.courseLength}\n`)
     } if (!this.#isCourseNameValid(newCourseName)) {
             console.log('Invalid course name')
-    } 
-    //console.log(this.#student.sCourseDetails.courseName)
-    /* if (this.#student.sCourseDetails.courseName.toLowerCase().localeCompare(newCourseName.toLowerCase()) == 0)
-        console.log('You are already enrolled in the course') */
-
+    } if (this.#isCourseNameValid(newCourseName) && this.#student.sCourseDetails.courseName.toLowerCase().localeCompare(newCourseName.toLowerCase()) === 0) {
+        console.log('You are already enrolled in the course')
+    }
 }
 
     /**
@@ -148,5 +148,19 @@ class Students extends Members {
      */
 
 
+    makePayment(amount) { 
+        if (this.#student.sBalance < amount){
+            console.log(`Invalid amount. Your balance is ${this.#student.sBalance}`);
+        }if (amount > 0 && this.#student.sBalance >= amount){
+            console.log(`Thank you for making payment of ${amount}`)
+            this.#student.sBalance = this.#student.sBalance - amount
+        }  if (this.#student.sBalance <= 0){
+            console.log(`No more payment required`);
+        } else { 
+            console.log(`Your New Balance Is ${this.#student.sBalance}`)
+        }
+    } 
+
 }
+
 module.exports = Students;
