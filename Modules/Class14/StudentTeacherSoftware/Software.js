@@ -83,9 +83,9 @@ console.log(`\n\n\n`);
 console.log(`hello`)
 
 const t1 = new Teachers();
-t1.teacherHired('John', 22, 'USA', "potato");
+t1.teacherHired('John', 22, 'USA', "Mobile");
 
 //t1.validateCourse('mobile');
 
 //t1.isCourseValid('mobile');
-//t1.showMyDetails();
+t1.showMyDetails();

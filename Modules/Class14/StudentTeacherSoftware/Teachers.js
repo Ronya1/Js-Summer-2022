@@ -68,10 +68,12 @@ class Teachers  {       // extends Members
     showMyDetails() {
       console.log(this.#teacher.tAge);
       console.log(this.#teacher.tName);
+      console.log(this.#teacher.tCountry)
+      console.log(this.#teacher.tCourseName)
    }
 
     changeTeachingCourse() {
-        // code
+        // code If current course is not same as new course, update course this.#teachercourse use.find method
     }
 
     /**
